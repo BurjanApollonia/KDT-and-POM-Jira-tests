@@ -41,4 +41,9 @@ public class BrowseIssueTest extends TestBase {
         driver.get("https://jira-auto.codecool.metastage.net/browse/COALA-5");
         Assertions.assertEquals("You can't view this issue", issue.issueNotAvailable());
     }
+
+    @AfterEach
+    public void closeDriver(){
+        driver.close();
+    }
 }
