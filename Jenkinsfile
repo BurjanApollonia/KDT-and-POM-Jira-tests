@@ -17,6 +17,7 @@ echo "password= CCAutoTest19." >> settings.properties
             sh '''export BROWSER="Chrome"
 export NODE_URL="https://selenium:CCAutoTest19.@seleniumhub.codecool.metastage.net/wd/hub"
 mvn  -Dtest=com.codecool.jira.KDT_and_POM_Jira_tests.POM.Test.*Test test'''
+            catchError()
           }
         }
 
@@ -25,6 +26,7 @@ mvn  -Dtest=com.codecool.jira.KDT_and_POM_Jira_tests.POM.Test.*Test test'''
             sh '''export BROWSER="Firefox"
 export NODE_URL="https://selenium:CCAutoTest19.@seleniumhub.codecool.metastage.net/wd/hub"
 mvn  -Dtest=com.codecool.jira.KDT_and_POM_Jira_tests.POM.Test.*Test test'''
+            catchError()
           }
         }
 
