@@ -3,7 +3,10 @@ pipeline {
   stages {
     stage('Setup') {
       steps {
-        sh 'pwd'
+        sh '''touch settings.properties
+echo "username= automation4" >> settings.properties
+echo "password= CCAutoTest19." >> settings.properties
+'''
       }
     }
 
