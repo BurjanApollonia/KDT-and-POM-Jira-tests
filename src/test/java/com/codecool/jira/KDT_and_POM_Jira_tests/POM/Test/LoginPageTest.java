@@ -6,6 +6,8 @@ import com.codecool.jira.KDT_and_POM_Jira_tests.POM.Pages.NavBar;
 import com.codecool.jira.KDT_and_POM_Jira_tests.POM.Pages.ProfilePage;
 import org.junit.jupiter.api.*;
 
+import java.net.MalformedURLException;
+
 public class LoginPageTest extends TestBase {
     JiraLoginPage login;
     NavBar navBar;
@@ -13,12 +15,13 @@ public class LoginPageTest extends TestBase {
     LogoutPage logoutPage;
 
     @BeforeAll
-    public static void start(){
+    public static void start() {
         setup();
     }
 
     @BeforeEach
-    public void goToUrl(){
+    public void goToUrl() throws MalformedURLException {
+        launchBrowser();
         driver.get("https://jira-auto.codecool.metastage.net/login.jsp");
     }
 
@@ -56,6 +59,6 @@ public class LoginPageTest extends TestBase {
 
     @AfterEach
     public void quit(){
-        driver.close();
+        driver.quit();
     }
 }

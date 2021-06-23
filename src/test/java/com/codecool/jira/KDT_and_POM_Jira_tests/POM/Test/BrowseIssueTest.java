@@ -8,6 +8,7 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.MethodSource;
 
 import java.io.IOException;
+import java.net.MalformedURLException;
 
 public class BrowseIssueTest extends TestBase {
     BrowseIssuePage issue;
@@ -24,8 +25,8 @@ public class BrowseIssueTest extends TestBase {
     }
 
     @BeforeEach
-    public void loginToJira() {
-        this.launchBrowser();
+    public void loginToJira() throws MalformedURLException {
+        launchBrowser();
         this.login();
         issue = new BrowseIssuePage(driver);
     }
@@ -43,7 +44,7 @@ public class BrowseIssueTest extends TestBase {
     }
 
     @AfterEach
-    public void closeDriver(){
-        driver.close();
+    public void quitDriver(){
+        driver.quit();
     }
 }
