@@ -46,6 +46,6 @@ public class BrowseProjectTest extends TestBase {
 
     @AfterEach
     public void closeDriver(){
-        driver.close();
+        driver.quit();
     }
 }

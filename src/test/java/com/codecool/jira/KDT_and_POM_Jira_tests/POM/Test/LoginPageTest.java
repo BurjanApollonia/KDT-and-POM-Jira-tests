@@ -59,6 +59,6 @@ public class LoginPageTest extends TestBase {
 
     @AfterEach
     public void quit(){
-        driver.close();
+        driver.quit();
     }
 }

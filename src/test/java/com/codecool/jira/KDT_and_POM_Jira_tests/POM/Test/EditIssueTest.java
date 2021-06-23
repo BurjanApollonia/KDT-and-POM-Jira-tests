@@ -74,6 +74,6 @@ public class EditIssueTest extends TestBase {
 
     @AfterEach
     public void closeDriver() {
-        driver.close();
+        driver.quit();
     }
 }

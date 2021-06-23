@@ -74,6 +74,6 @@ public class LoginLogoutTest extends TestBase {
 
     @AfterEach
     public void quit(){
-        driver.close();
+        driver.quit();
     }
 }
