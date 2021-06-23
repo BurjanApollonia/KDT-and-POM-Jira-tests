@@ -3,7 +3,6 @@ pipeline {
   stages {
     stage('Setup') {
       steps {
-        cleanWs(cleanWhenAborted: true, cleanWhenFailure: true, cleanWhenNotBuilt: true)
         sh 'pwd'
       }
     }
