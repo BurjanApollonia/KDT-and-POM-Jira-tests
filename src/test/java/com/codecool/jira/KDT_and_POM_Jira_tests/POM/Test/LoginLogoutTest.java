@@ -16,11 +16,11 @@ public class LoginLogoutTest extends TestBase {
     @BeforeAll
     public static void start() throws MalformedURLException {
         setup();
-        launchBrowser();
     }
 
     @BeforeEach
-    public void goToUrl(){
+    public void goToUrl() throws MalformedURLException {
+        launchBrowser();
         driver.get("https://jira-auto.codecool.metastage.net");
     }
 

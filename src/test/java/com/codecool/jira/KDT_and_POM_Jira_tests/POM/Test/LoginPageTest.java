@@ -15,13 +15,13 @@ public class LoginPageTest extends TestBase {
     LogoutPage logoutPage;
 
     @BeforeAll
-    public static void start() throws MalformedURLException {
+    public static void start() {
         setup();
-        launchBrowser();
     }
 
     @BeforeEach
-    public void goToUrl(){
+    public void goToUrl() throws MalformedURLException {
+        launchBrowser();
         driver.get("https://jira-auto.codecool.metastage.net/login.jsp");
     }
 
