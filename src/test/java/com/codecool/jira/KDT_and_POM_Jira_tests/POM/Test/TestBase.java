@@ -37,6 +37,7 @@ public abstract class TestBase {
 
     public static void launchBrowser() throws MalformedURLException {
         nodeUrl = System.getenv("NODE_URL");
+        System.out.println(nodeUrl);
         String browserName = System.getenv("BROWSER");
         System.out.println(browserName);
         if (browserName.equals("Chrome")){
