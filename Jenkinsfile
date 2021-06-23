@@ -3,8 +3,6 @@ pipeline {
   stages {
     stage('Setup') {
       steps {
-        git(url: 'git@github.com:BurjanApollonia/KDT-and-POM-Jira-tests.git', branch: 'development', changelog: true)
-        echo 'Checked out GitHub'
         cleanWs(cleanWhenAborted: true, cleanWhenFailure: true, cleanWhenNotBuilt: true)
       }
     }
